@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.track.TrackFragment">
+
+    <TextView
+        android:id="@+id/welcome_back"
+        android:layout_width="235dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Welcome Back"
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/subheader"
+        android:layout_width="match_parent"
+        android:layout_height="27dp"
+        android:gravity="center"
+        android:text="Let's listen to some news while you exercise."
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcome_back" />
+
+    <EditText
+        android:id="@+id/newsSearchTerm"
+        android:layout_width="311dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-light"
+        android:textSize="15dp"
+        android:hint='Enter a word to hear to news. Ex: "COVID"'
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/textView6"
+        app:layout_constraintStart_toStartOf="@+id/textView6"
+        app:layout_constraintTop_toTopOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="347dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="25dp"
+        android:background="#20A6A5A5"
+        app:layout_constraintStart_toStartOf="@+id/workoutBackground"
+        app:layout_constraintTop_toBottomOf="@+id/workoutBackground" />
+
+    <TextView
+        android:id="@+id/stepcounter"
+        android:layout_width="177dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="64dp"
+        android:fontFamily="monospace"
+        android:text="Please enable permission!"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/workoutBackground"
+        app:layout_constraintHorizontal_bias="0.817"
+        app:layout_constraintStart_toStartOf="@+id/workoutBackground"
+        app:layout_constraintTop_toTopOf="@+id/workoutBackground" />
+
+    <Button
+        android:id="@+id/button"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="310dp"
+        android:layout_height="48dp"
+        android:background="#009688"
+        android:onClick="onActionButtonClick"
+        android:text="Start Workout and Play News"
+        android:textColor="#FFFFFF"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView6"
+        app:layout_constraintEnd_toEndOf="@+id/textView6"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="@+id/textView6"
+        app:layout_constraintTop_toTopOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.796" />
+
+    <TextView
+        android:id="@+id/workoutBackground"
+        android:layout_width="347dp"
+        android:layout_height="177dp"
+        android:background="#20A6A5A5"
+        app:layout_constraintBottom_toBottomOf="@+id/data_alert"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subheader"
+        app:layout_constraintVertical_bias="0.055" />
+
+    <TextView
+        android:id="@+id/workout_tracker_title"
+        android:layout_width="139dp"
+        android:layout_height="20dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="WORKOUT TRACKER"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/workoutBackground"
+        app:layout_constraintEnd_toEndOf="@+id/workoutBackground"
+        app:layout_constraintHorizontal_bias="0.048"
+        app:layout_constraintStart_toStartOf="@+id/workoutBackground"
+        app:layout_constraintTop_toTopOf="@+id/workoutBackground"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="99dp"
+        android:layout_height="20dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="NEWS PLAYER"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView6"
+        app:layout_constraintEnd_toEndOf="@+id/textView6"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="@+id/workout_tracker_title"
+        app:layout_constraintTop_toTopOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.044" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="48dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        app:layout_constraintEnd_toEndOf="@+id/workoutBackground"
+        app:layout_constraintHorizontal_bias="0.173"
+        app:layout_constraintStart_toStartOf="@+id/workoutBackground"
+        app:layout_constraintTop_toTopOf="@+id/workoutBackground"
+        app:layout_constraintVertical_bias="0.173"
+        app:srcCompat="@drawable/ic_directions_walk_24px" />
+
+    <TextView
+        android:id="@+id/data_alert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="550dp"
+        android:text="(!) Your workout data will be saved to your account."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/workoutNotStarted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="204dp"
+        android:text="Workout not started yet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

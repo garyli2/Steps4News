@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_track">
+
+    <fragment
+        android:id="@+id/navigation_track"
+        android:name="com.steps4news.ui.track.TrackFragment"
+        tools:layout="@layout/fragment_track" />
+
+    <fragment
+        android:id="@+id/navigation_data"
+        android:name="com.steps4news.ui.data.DataFragment"
+        tools:layout="@layout/fragment_data" />
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.steps4news.ui.settings.SettingsFragment"
+        tools:layout="@layout/fragment_settings" />
+</navigation>

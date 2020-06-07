@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.settings.SettingsFragment">
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="223dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Your Settings"
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/currentEmailInput"
+        android:layout_width="251dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Current Email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/authenticate_warning" />
+
+    <EditText
+        android:id="@+id/currentPasswordInput"
+        android:layout_width="255dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Current Password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/currentEmailInput"
+        app:layout_constraintStart_toStartOf="@+id/currentEmailInput"
+        app:layout_constraintTop_toBottomOf="@+id/currentEmailInput" />
+
+    <Button
+        android:id="@+id/reauthenticate_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Re-authenticate"
+        app:layout_constraintEnd_toEndOf="@+id/currentPasswordInput"
+        app:layout_constraintStart_toStartOf="@+id/currentPasswordInput"
+        app:layout_constraintTop_toBottomOf="@+id/currentPasswordInput" />
+
+    <EditText
+        android:id="@+id/newPasswordInput"
+        android:layout_width="199dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="New Password"
+        android:inputType="textWebPassword"
+        app:layout_constraintStart_toStartOf="@+id/password_prompt"
+        app:layout_constraintTop_toBottomOf="@+id/password_prompt" />
+
+    <TextView
+        android:id="@+id/password_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="35dp"
+        android:text="Change Your Password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reauthenticate_button" />
+
+    <Button
+        android:id="@+id/submitNewPassword"
+        style="@style/FirebaseUI.Button"
+        android:layout_width="157dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="8dp"
+        android:enabled="false"
+        android:text="Change Password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.282"
+        app:layout_constraintStart_toEndOf="@+id/newPasswordInput"
+        app:layout_constraintTop_toBottomOf="@+id/password_prompt" />
+
+    <Button
+        android:id="@+id/submitNewEmail"
+        style="@style/FirebaseUI.Button"
+        android:layout_width="164dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="12dp"
+        android:enabled="false"
+        android:text="Change Email"
+        app:layout_constraintStart_toStartOf="@+id/submitNewPassword"
+        app:layout_constraintTop_toBottomOf="@+id/email_prompt" />
+
+    <TextView
+        android:id="@+id/email_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Change Your Email"
+        app:layout_constraintStart_toStartOf="@+id/password_prompt"
+        app:layout_constraintTop_toBottomOf="@+id/newPasswordInput" />
+
+    <EditText
+        android:id="@+id/newEmailInput"
+        android:layout_width="200dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="New Email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintStart_toStartOf="@+id/newPasswordInput"
+        app:layout_constraintTop_toBottomOf="@+id/email_prompt" />
+
+    <TextView
+        android:id="@+id/authenticate_warning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="To change user settings, you must re-authenticate."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/anonymousUserWarning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Anonymous users cannot access settings."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/logout_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log out"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newEmailInput"
+        app:layout_constraintVertical_bias="0.10" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

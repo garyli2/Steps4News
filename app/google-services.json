@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "752353792599",
+    "firebase_url": "https://steps4news.firebaseio.com",
+    "project_id": "steps4news",
+    "storage_bucket": "steps4news.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:752353792599:android:602730bc472c17e3b14912",
+        "android_client_info": {
+          "package_name": "com.steps4news"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "752353792599-n22ad28huss89aehu2q5hr485dcjsmf2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3j6pLc0csLYs0xpDu-OMPJAg99aKpDh4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "752353792599-n22ad28huss89aehu2q5hr485dcjsmf2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
